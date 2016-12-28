@@ -1,0 +1,323 @@
+BEGIN:VCALENDAR
+PRODID:-//calendar.zoznam.sk//EN
+VERSION:2.0
+METHOD:PUBLISH
+CALSCALE:GREGORIAN
+BEGIN:VTIMEZONE
+TZID:Europe/Bratislava
+BEGIN:STANDARD
+DTSTART:20041031T030000
+RRULE:FREQ=YEARLY;INTERVAL=1;BYDAY=-1SU;BYMONTH=10
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:Standard Time
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:20040328T020000
+RRULE:FREQ=YEARLY;INTERVAL=1;BYDAY=-1SU;BYMONTH=3
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:Daylight Savings Time
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+CATEGORIES:PERSONAL;NAMEDAY
+URL:http://calendar.zoznam.sk/nameday-skskhor.php
+
+DTSTART;TZID=Europe/Bratislava;VALUE=DATE:20170101
+DTEND;TZID=Europe/Bratislava;VALUE=DATE:20170102
+TRANSP:TRANSPARENT
+SEQUENCE:0
+UID:calendar.zoznam.sk-02-20170101-sk
+DTSTAMP:20161228T135630Z
+DESCRIPTION:Deň vzniku Slovenskej republiky\n_________________________________________________\nhttp://calendar.zoznam.sk
+SUMMARY:Deň vzniku Slovenskej republiky
+PRIORITY:5
+CLASS:PUBLIC
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:PERSONAL;NAMEDAY
+URL:http://calendar.zoznam.sk/nameday-skskhor.php
+
+DTSTART;TZID=Europe/Bratislava;VALUE=DATE:20170705
+DTEND;TZID=Europe/Bratislava;VALUE=DATE:20170706
+TRANSP:TRANSPARENT
+SEQUENCE:0
+UID:calendar.zoznam.sk-02-20170705-sk
+DTSTAMP:20161228T135630Z
+DESCRIPTION:Sviatok svätého Cyrila a Metoda\n_________________________________________________\nhttp://calendar.zoznam.sk
+SUMMARY:Sviatok svätého Cyrila a Metoda
+PRIORITY:5
+CLASS:PUBLIC
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:PERSONAL;NAMEDAY
+URL:http://calendar.zoznam.sk/nameday-skskhor.php
+
+DTSTART;TZID=Europe/Bratislava;VALUE=DATE:20170829
+DTEND;TZID=Europe/Bratislava;VALUE=DATE:20170830
+TRANSP:TRANSPARENT
+SEQUENCE:0
+UID:calendar.zoznam.sk-02-20170829-sk
+DTSTAMP:20161228T135630Z
+DESCRIPTION:Výročie Slovenského národného povstania\n_________________________________________________\nhttp://calendar.zoznam.sk
+SUMMARY:Výročie Slovenského národného povstania
+PRIORITY:5
+CLASS:PUBLIC
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:PERSONAL;NAMEDAY
+URL:http://calendar.zoznam.sk/nameday-skskhor.php
+
+DTSTART;TZID=Europe/Bratislava;VALUE=DATE:20170901
+DTEND;TZID=Europe/Bratislava;VALUE=DATE:20170902
+TRANSP:TRANSPARENT
+SEQUENCE:0
+UID:calendar.zoznam.sk-02-20170901-sk
+DTSTAMP:20161228T135630Z
+DESCRIPTION:Deň ústavy Slovenskej republiky\n_________________________________________________\nhttp://calendar.zoznam.sk
+SUMMARY:Deň ústavy Slovenskej republiky
+PRIORITY:5
+CLASS:PUBLIC
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:PERSONAL;NAMEDAY
+URL:http://calendar.zoznam.sk/nameday-skskhor.php
+
+DTSTART;TZID=Europe/Bratislava;VALUE=DATE:20171117
+DTEND;TZID=Europe/Bratislava;VALUE=DATE:20171118
+TRANSP:TRANSPARENT
+SEQUENCE:0
+UID:calendar.zoznam.sk-02-20171117-sk
+DTSTAMP:20161228T135630Z
+DESCRIPTION:Deň boja za slobodu a demokraciu\n_________________________________________________\nhttp://calendar.zoznam.sk
+SUMMARY:Deň boja za slobodu a demokraciu
+PRIORITY:5
+CLASS:PUBLIC
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:PERSONAL;NAMEDAY
+URL:http://calendar.zoznam.sk/nameday-skskhor.php
+
+DTSTART;TZID=Europe/Bratislava;VALUE=DATE:20170106
+DTEND;TZID=Europe/Bratislava;VALUE=DATE:20170107
+TRANSP:TRANSPARENT
+SEQUENCE:0
+UID:calendar.zoznam.sk-02-20170106-sk
+DTSTAMP:20161228T135630Z
+DESCRIPTION:Zjavenie Pána (Traja králi a vianočný sviatok pravoslávnych kresťanov)\n_________________________________________________\nhttp://calendar.zoznam.sk
+SUMMARY:Zjavenie Pána (Traja králi a vianočný sviatok pravoslávnych kresťanov)
+PRIORITY:5
+CLASS:PUBLIC
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:PERSONAL;NAMEDAY
+URL:http://calendar.zoznam.sk/nameday-skskhor.php
+
+DTSTART;TZID=Europe/Bratislava;VALUE=DATE:20170414
+DTEND;TZID=Europe/Bratislava;VALUE=DATE:20170415
+TRANSP:TRANSPARENT
+SEQUENCE:0
+UID:calendar.zoznam.sk-02-20170414-sk
+DTSTAMP:20161228T135630Z
+DESCRIPTION:Veľký piatok\n_________________________________________________\nhttp://calendar.zoznam.sk
+SUMMARY:Veľký piatok
+PRIORITY:5
+CLASS:PUBLIC
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:PERSONAL;NAMEDAY
+URL:http://calendar.zoznam.sk/nameday-skskhor.php
+
+DTSTART;TZID=Europe/Bratislava;VALUE=DATE:20170417
+DTEND;TZID=Europe/Bratislava;VALUE=DATE:20170418
+TRANSP:TRANSPARENT
+SEQUENCE:0
+UID:calendar.zoznam.sk-02-20170417-sk
+DTSTAMP:20161228T135630Z
+DESCRIPTION:Veľkonočný pondelok\n_________________________________________________\nhttp://calendar.zoznam.sk
+SUMMARY:Veľkonočný pondelok
+PRIORITY:5
+CLASS:PUBLIC
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:PERSONAL;NAMEDAY
+URL:http://calendar.zoznam.sk/nameday-skskhor.php
+
+DTSTART;TZID=Europe/Bratislava;VALUE=DATE:20170501
+DTEND;TZID=Europe/Bratislava;VALUE=DATE:20170502
+TRANSP:TRANSPARENT
+SEQUENCE:0
+UID:calendar.zoznam.sk-02-20170501-sk
+DTSTAMP:20161228T135630Z
+DESCRIPTION:Sviatok práce\n_________________________________________________\nhttp://calendar.zoznam.sk
+SUMMARY:Sviatok práce
+PRIORITY:5
+CLASS:PUBLIC
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:PERSONAL;NAMEDAY
+URL:http://calendar.zoznam.sk/nameday-skskhor.php
+
+DTSTART;TZID=Europe/Bratislava;VALUE=DATE:20170508
+DTEND;TZID=Europe/Bratislava;VALUE=DATE:20170509
+TRANSP:TRANSPARENT
+SEQUENCE:0
+UID:calendar.zoznam.sk-02-20170508-sk
+DTSTAMP:20161228T135630Z
+DESCRIPTION:Deň víťazstva nad fašizmom\n_________________________________________________\nhttp://calendar.zoznam.sk
+SUMMARY:Deň víťazstva nad fašizmom
+PRIORITY:5
+CLASS:PUBLIC
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:PERSONAL;NAMEDAY
+URL:http://calendar.zoznam.sk/nameday-skskhor.php
+
+DTSTART;TZID=Europe/Bratislava;VALUE=DATE:20170915
+DTEND;TZID=Europe/Bratislava;VALUE=DATE:20170916
+TRANSP:TRANSPARENT
+SEQUENCE:0
+UID:calendar.zoznam.sk-02-20170915-sk
+DTSTAMP:20161228T135630Z
+DESCRIPTION:Sedembolestná Panna Mária\n_________________________________________________\nhttp://calendar.zoznam.sk
+SUMMARY:Sedembolestná Panna Mária
+PRIORITY:5
+CLASS:PUBLIC
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:PERSONAL;NAMEDAY
+URL:http://calendar.zoznam.sk/nameday-skskhor.php
+
+DTSTART;TZID=Europe/Bratislava;VALUE=DATE:20171101
+DTEND;TZID=Europe/Bratislava;VALUE=DATE:20171102
+TRANSP:TRANSPARENT
+SEQUENCE:0
+UID:calendar.zoznam.sk-02-20171101-sk
+DTSTAMP:20161228T135630Z
+DESCRIPTION:Sviatok všetkých svätých\n_________________________________________________\nhttp://calendar.zoznam.sk
+SUMMARY:Sviatok všetkých svätých
+PRIORITY:5
+CLASS:PUBLIC
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:PERSONAL;NAMEDAY
+URL:http://calendar.zoznam.sk/nameday-skskhor.php
+
+DTSTART;TZID=Europe/Bratislava;VALUE=DATE:20171224
+DTEND;TZID=Europe/Bratislava;VALUE=DATE:20171225
+TRANSP:TRANSPARENT
+SEQUENCE:0
+UID:calendar.zoznam.sk-02-20171224-sk
+DTSTAMP:20161228T135630Z
+DESCRIPTION:Štedrý deň\n_________________________________________________\nhttp://calendar.zoznam.sk
+SUMMARY:Štedrý deň
+PRIORITY:5
+CLASS:PUBLIC
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:PERSONAL;NAMEDAY
+URL:http://calendar.zoznam.sk/nameday-skskhor.php
+
+DTSTART;TZID=Europe/Bratislava;VALUE=DATE:20171225
+DTEND;TZID=Europe/Bratislava;VALUE=DATE:20171226
+TRANSP:TRANSPARENT
+SEQUENCE:0
+UID:calendar.zoznam.sk-02-20171225-sk
+DTSTAMP:20161228T135630Z
+DESCRIPTION:Prvý sviatok vianočný\n_________________________________________________\nhttp://calendar.zoznam.sk
+SUMMARY:Prvý sviatok vianočný
+PRIORITY:5
+CLASS:PUBLIC
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+CATEGORIES:PERSONAL;NAMEDAY
+URL:http://calendar.zoznam.sk/nameday-skskhor.php
+
+DTSTART;TZID=Europe/Bratislava;VALUE=DATE:20171226
+DTEND;TZID=Europe/Bratislava;VALUE=DATE:20171227
+TRANSP:TRANSPARENT
+SEQUENCE:0
+UID:calendar.zoznam.sk-02-20171226-sk
+DTSTAMP:20161228T135630Z
+DESCRIPTION:Druhý sviatok vianočný\n_________________________________________________\nhttp://calendar.zoznam.sk
+SUMMARY:Druhý sviatok vianočný
+PRIORITY:5
+CLASS:PUBLIC
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+END:VEVENT
+END:VCALENDAR

@@ -14,8 +14,8 @@ except ImportError as err:
     print("It can only be run from within Scribus.")
     sys.exit(1)
 
-import json
 import dates
+import data
 
 YEAR = 2017
 PAPER = scribus.PAPER_A4
@@ -36,7 +36,22 @@ def iterDayLines():
         yield (xend, y)
         y += lineHeight 
 
-
+def mm(d):
+    m = {
+        1: 'Jan',
+        2: 'Feb',
+        3: 'Mar',
+        4: 'Apr',
+        5: 'Máj',
+        6: 'Jún',
+        7: 'Júl',
+        8: 'Aug',
+        9: 'Sep',
+        10:'Okt',
+        11:'Nov',
+        12:'Dec'
+    }
+    return m[d.month]
 
 def masterPage():
 
@@ -56,17 +71,9 @@ def masterPage():
     scribus.setVGuides([PAPER[1]/2])
     #txt = scribus.createText(300, 300, 100, 100)
     #scribus.setText('\x1e', txt)
+    #scribus.messageBox('', str(scribus.getAllStyles()))
     scribus.closeMasterPage()
 
-def loadData():
-    with open('namedays.json', 'r') as f:
-        data = f.read()
-    namedays = json.loads(data)
-    out = {i:{} for i in range(1,13)}
-    for nd_date, nd_name in namedays:
-        nd_year, nd_month, nd_day = nd_date.split('-')
-        out[nd_month][nd_day] = nd_name
-    return out
 
 
 def main(argv):
@@ -86,9 +93,18 @@ def main(argv):
                         0, #firstPageOrder
                         0, #numPages
                         )
+    scribus.createCharStyle('date1', 'Athelas Bold', 45)
+    scribus.createCharStyle('month1', 'Athelas Bold', 16)
+    scribus.createCharStyle('name1', 'Athelas Regular', 16)
+    scribus.createParagraphStyle('dateL', alignment=scribus.ALIGN_LEFT, charstyle='date1')
+    scribus.createParagraphStyle('monthL', alignment=scribus.ALIGN_LEFT, charstyle='month1')
+    scribus.createParagraphStyle('nameL', alignment=scribus.ALIGN_LEFT, charstyle='name1')
+    scribus.createParagraphStyle('dateR', alignment=scribus.ALIGN_RIGHT, charstyle='date1')
+    scribus.createParagraphStyle('monthR', alignment=scribus.ALIGN_RIGHT, charstyle='month1')
+    scribus.createParagraphStyle('nameR', alignment=scribus.ALIGN_RIGHT, charstyle='name1')
     masterPage()
 
-    d = loadData()
+    d = data.loadData()
     """
     We want to make pamphlet (signature) of 5 x A4 papers printed from both sides with 2 weeks on each side
     2sided 4imposition refer imposition.py
@@ -96,16 +112,50 @@ def main(argv):
 
     def pageFn(left, right):
         page = scribus.newPage(-1,  'planner')
-        fontHeight = 20
-        fontWidth = 20
         i = 0
+        sizeDate = (20, 15)
+        sizeMonth = (20, 7)
+        sizeName = (290, 7)
         for xend, y in iterDayLines():
-            tLeft = scribus.createText(xstart, y - fontHeight, fontWidth, fontHeight)
-            scribus.setText(str(left[i]), tLeft)
-            tRight = scribus.createText(xend - fontWidth, y - fontHeight, fontWidth, fontHeight)
-            scribus.setText(str(right[i]), tRight)
+            try:
+                tLeftDate = left[i]
+                posLeftDate = (xstart, y - sizeDate[1])
+                posLeftMonth = (xstart + sizeDate[0], y - sizeDate[1])
+                posLeftName = (xstart + sizeDate[0], y - sizeName[1])
+                tLeftName = ', '.join(d[tLeftDate.month][tLeftDate.day])
+                objLeftDate = scribus.createText(*posLeftDate+sizeDate)
+                objLeftMonth = scribus.createText(*posLeftMonth+sizeMonth)
+                objLeftName = scribus.createText(*posLeftName+sizeName)
+                scribus.setText(tLeftDate.strftime('%d'), objLeftDate)
+                scribus.setText(mm(tLeftDate), objLeftMonth)
+                scribus.setText(tLeftName, objLeftName)
+                scribus.setStyle('dateL', objLeftDate)
+                scribus.setStyle('monthL', objLeftMonth)
+                scribus.setStyle('nameL', objLeftName)
+            except IndexError:
+                pass
+
+
+            try:
+                posRightDate = (xend - sizeDate[0], y - sizeDate[1])
+                posRightMonth = (xend - sizeDate[0] - sizeMonth[0], y - sizeDate[1])
+                posRightName = (xend - sizeDate[0] - sizeName[0], y - sizeName[1])
+                tRightDate = right[i]
+                tRightName = ', '.join(d[tRightDate.month][tRightDate.day])
+                objRightDate = scribus.createText(*posRightDate+sizeDate)
+                objRightMonth = scribus.createText(*posRightMonth+sizeMonth)
+                objRightName = scribus.createText(*posRightName+sizeName)
+                scribus.setText(tRightDate.strftime('%d'), objRightDate)
+                scribus.setText(mm(tRightDate), objRightMonth)
+                scribus.setText(tRightName, objRightName)
+                scribus.setStyle('dateR', objRightDate)
+                scribus.setStyle('monthR', objRightMonth)
+                scribus.setStyle('nameR', objRightName)
+            except IndexError:
+                pass
             i += 1
     dates.forEachWeek(pageFn)
+    scribus.deletePage(1)
 
 
 def main_wrapper(argv):
